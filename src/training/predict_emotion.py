@@ -35,3 +35,8 @@ if __name__ == "__main__":
     else:
         label, emotion = predict_emotion(img)
         print(f"😊 Cảm xúc dự đoán: {emotion} (label {label})")
+
+def predict_emotion_from_array(img_array):
+    prediction = model.predict(img_array)
+    label = np.argmax(prediction)
+    return label, label_map[label]
