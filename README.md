@@ -12,3 +12,11 @@
 - `src/detection/`: xử lý webcam
 - `src/training/`: mô hình AI
 - `src/app/`: giao diện tích hợp (hiển thị cảm xúc)
+
+- ## Ngày 2 - Người 3: Tích hợp pipeline & giao diện kết quả
+
+- ✅ Đã tạo file chính `src/app/app_main.py`
+- ✅ Load mô hình `.h5` thành công
+- ✅ Mở webcam bằng OpenCV
+- ✅ Khai báo danh sách cảm xúc `emotion_labels`
+
