@@ -1,4 +1,4 @@
-# File mới: predict_emotion.py
+# File: predict_emotion.py
 
 import tensorflow as tf
 import numpy as np
@@ -22,7 +22,8 @@ def predict_emotion(img):
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if img.shape[-1] == 3 else img
     img = img.reshape(1, 48, 48, 1).astype("float32") / 255.0
 
-    prediction = model.predict(img)
+    # ✅ Hiển thị thanh tiến trình khi predict
+    prediction = model.predict(img, verbose=1)
     label = np.argmax(prediction)
     return label, label_map[label]
 
